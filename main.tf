@@ -45,7 +45,7 @@ resource "aws_cloudwatch_metric_alarm" "fallback" {
 
     metric {
       dimensions = {
-        "AutoScalingGroupName" = "vmarguerie-ref_encoding-spot-group"
+        "AutoScalingGroupName" = var.spot_asg_name
       }
       metric_name = "GroupDesiredCapacity"
       namespace   = "AWS/AutoScaling"
@@ -59,7 +59,7 @@ resource "aws_cloudwatch_metric_alarm" "fallback" {
 
     metric {
       dimensions = {
-        "AutoScalingGroupName" = "vmarguerie-ref_encoding-spot-group"
+        "AutoScalingGroupName" = var.spot_asg_name
       }
       metric_name = "GroupInServiceCapacity"
       namespace   = "AWS/AutoScaling"
