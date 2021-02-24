@@ -4,6 +4,7 @@ A terraform module for Quortex infrastructure AWS spot instances monitoring.
 
 It provides a set of resources necessary to provision monitoring of an autoscaling group spot instances and backup strategies on a fallback on demand autoscaling group.
 A scale-out of the fallback group is triggered when the specified Spot group's "InServiceCapacity" metric falls below 90% of the "DesiredCapacity" for a duration of 2x60s. The threshold and duration values are configurable.
+
 This module is available on [Terraform Registry][registry_tf_aws_spot_monitoring].
 
 Get all our terraform modules on [Terraform Registry][registry_tf_modules] or on [Github][github_tf_modules] !

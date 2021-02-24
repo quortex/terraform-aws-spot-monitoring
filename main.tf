@@ -14,12 +14,6 @@
  * limitations under the License.
  */
 
-# AWS provider configuration
-# version constraints defined in versions.tf
-provider "aws" {
-  region = var.region
-}
-
 # The fallback autoscaling group autoscaling policy.
 resource "aws_autoscaling_policy" "fallback" {
   name                   = var.fallback_asg_policy_name
